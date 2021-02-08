@@ -102,7 +102,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'decide.wsgi.application'
 
-APIS = {}
+APIS = {
+    'authentication': BASEURL,
+    'base': BASEURL,
+    'booth': BASEURL,
+    'census': BASEURL,
+    'mixnet': BASEURL,
+    'postproc': BASEURL,
+    'store': BASEURL,
+    'visualizer': BASEURL,
+    'voting': BASEURL,
+}
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
