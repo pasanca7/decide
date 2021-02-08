@@ -70,7 +70,7 @@ MODULES = [
     'voting',
 ]
 
-BASEURL = 'http://localhost:8000'
+BASEURL = 'https://pabdecar-decide.herokuapp.com/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -102,6 +102,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'decide.wsgi.application'
 
+APIS = {}
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
@@ -180,3 +181,6 @@ if os.path.exists("config.jsonnet"):
 
 
 INSTALLED_APPS = INSTALLED_APPS + MODULES
+
+import django_heroku
+django_heroku.settings(locals())
